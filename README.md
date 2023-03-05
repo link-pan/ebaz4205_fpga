@@ -1,12 +1,10 @@
+cloned from Lukas Lichtl (admin@embed-me.com)
+
 # ebaz4205_fpga
 
 The EBAZ4205 was originally developed as cryptomining control board.
 Due to it's low price on the marked it is also perfect to learn
 the Zynq platform. This repo provides a minimal FPGA Design.
-
-## Maintainer
-
-	Lukas Lichtl (admin@embed-me.com)
 
 ## Hardware Support
 
