@@ -1,4 +1,6 @@
-cloned from Lukas Lichtl (admin@embed-me.com)
+cloned from Lukas Lichtl (admin@embed-me.com)  
+use git pull upstream main to pull updates from origin  
+use git push origin main for local changes  
 
 # ebaz4205_fpga
 
