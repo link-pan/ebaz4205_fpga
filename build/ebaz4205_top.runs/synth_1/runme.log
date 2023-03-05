@@ -1,0 +1,343 @@
+
+*** Running vivado
+    with args -log ebaz4205_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ebaz4205_top.tcl
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source ebaz4205_top.tcl -notrace
+Command: synth_design -top ebaz4205_top -part xc7z010clg400-1 -assert -verbose
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1943674 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1275.230 ; gain = 86.863 ; free physical = 1954 ; free virtual = 20013
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'ebaz4205_top' [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:72]
+INFO: [Synth 8-638] synthesizing module 'system_wrapper' [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/system_wrapper.vhd:52]
+INFO: [Synth 8-3491] module 'IOBUF' declared at '/tools/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660' bound to instance 'eth0_mdio_mdio_iobuf' of component 'IOBUF' [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/system_wrapper.vhd:104]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/tools/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [/tools/Xilinx/Vivado/2018.2/scripts/rt/data/unisim_comp.v:22660]
+INFO: [Synth 8-637] synthesizing blackbox instance 'system_i' of component 'system' [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/system_wrapper.vhd:111]
+INFO: [Synth 8-256] done synthesizing module 'system_wrapper' (2#1) [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/system_wrapper.vhd:52]
+WARNING: [Synth 8-3848] Net emio_i in module/entity ebaz4205_top does not have driver. [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:77]
+INFO: [Synth 8-256] done synthesizing module 'ebaz4205_top' (3#1) [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:72]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1319.855 ; gain = 131.488 ; free physical = 1965 ; free virtual = 20025
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[63] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[62] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[61] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[60] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[59] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[58] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[57] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[56] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[55] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[54] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[53] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[52] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[51] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[50] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[49] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[48] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[47] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[46] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[45] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[44] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[43] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[42] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[41] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[40] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[39] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[38] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[37] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[36] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[35] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[34] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[33] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[32] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[31] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[30] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[29] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[28] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[27] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[26] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[25] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[24] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[23] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[22] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[21] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[20] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[19] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[18] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[17] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[16] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[15] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[14] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[13] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[12] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[11] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[10] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[9] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[8] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[7] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[6] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[5] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[4] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[3] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[2] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[1] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+WARNING: [Synth 8-3295] tying undriven pin system_wrapper_i:emio_i[0] to constant 0 [/home/link/fpga/projects/ebaz4205_fpga/src/hdl/ebaz4205_top.vhd:87]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1319.855 ; gain = 131.488 ; free physical = 1966 ; free virtual = 20026
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1319.855 ; gain = 131.488 ; free physical = 1966 ; free virtual = 20026
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/link/fpga/projects/ebaz4205_fpga/src/xilinx/xdc/pinout.xdc]
+Finished Parsing XDC File [/home/link/fpga/projects/ebaz4205_fpga/src/xilinx/xdc/pinout.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/link/fpga/projects/ebaz4205_fpga/src/xilinx/xdc/pinout.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ebaz4205_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ebaz4205_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/link/fpga/projects/ebaz4205_fpga/src/xilinx/xdc/general.xdc]
+Finished Parsing XDC File [/home/link/fpga/projects/ebaz4205_fpga/src/xilinx/xdc/general.xdc]
+Parsing XDC File [/home/link/fpga/projects/ebaz4205_fpga/src/xilinx/xdc/bitstream.xdc]
+Finished Parsing XDC File [/home/link/fpga/projects/ebaz4205_fpga/src/xilinx/xdc/bitstream.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1599.449 ; gain = 0.000 ; free physical = 1747 ; free virtual = 19797
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1599.449 ; gain = 411.082 ; free physical = 1819 ; free virtual = 19869
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1599.449 ; gain = 411.082 ; free physical = 1819 ; free virtual = 19869
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1599.449 ; gain = 411.082 ; free physical = 1821 ; free virtual = 19871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1599.449 ; gain = 411.082 ; free physical = 1820 ; free virtual = 19871
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component detection 
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1599.449 ; gain = 411.082 ; free physical = 1820 ; free virtual = 19872
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:29 . Memory (MB): peak = 1599.449 ; gain = 411.082 ; free physical = 1692 ; free virtual = 19744
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:29 . Memory (MB): peak = 1599.449 ; gain = 411.082 ; free physical = 1692 ; free virtual = 19744
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:29 . Memory (MB): peak = 1599.449 ; gain = 411.082 ; free physical = 1692 ; free virtual = 19744
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1599.449 ; gain = 411.082 ; free physical = 1692 ; free virtual = 19744
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1599.449 ; gain = 411.082 ; free physical = 1692 ; free virtual = 19744
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1599.449 ; gain = 411.082 ; free physical = 1692 ; free virtual = 19744
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1599.449 ; gain = 411.082 ; free physical = 1692 ; free virtual = 19744
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1599.449 ; gain = 411.082 ; free physical = 1692 ; free virtual = 19744
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1599.449 ; gain = 411.082 ; free physical = 1692 ; free virtual = 19744
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |system        |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |system_bbox_0 |     1|
+|2     |IBUF          |     7|
+|3     |IOBUF         |     1|
+|4     |OBUF          |     9|
++------+--------------+------+
+
+Report Instance Areas: 
++------+-------------------+---------------+------+
+|      |Instance           |Module         |Cells |
++------+-------------------+---------------+------+
+|1     |top                |               |   158|
+|2     |  system_wrapper_i |system_wrapper |   142|
++------+-------------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1599.449 ; gain = 411.082 ; free physical = 1692 ; free virtual = 19744
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1599.449 ; gain = 131.488 ; free physical = 1749 ; free virtual = 19801
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:30 . Memory (MB): peak = 1599.449 ; gain = 411.082 ; free physical = 1749 ; free virtual = 19801
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+22 Infos, 65 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 1611.434 ; gain = 434.656 ; free physical = 1734 ; free virtual = 19786
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/link/fpga/projects/ebaz4205_fpga/build/ebaz4205_top.runs/synth_1/ebaz4205_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ebaz4205_top_utilization_synth.rpt -pb ebaz4205_top_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1611.434 ; gain = 0.000 ; free physical = 1734 ; free virtual = 19786
+INFO: [Common 17-206] Exiting Vivado at Sun Mar  5 09:23:37 2023...

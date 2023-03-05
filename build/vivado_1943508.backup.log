@@ -1,0 +1,50 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Mar  5 09:22:40 2023
+# Process ID: 1943508
+# Current directory: /home/link/fpga/projects/ebaz4205_fpga/build
+# Command line: vivado -mode tcl -source project.tcl
+# Log file: /home/link/fpga/projects/ebaz4205_fpga/build/vivado.log
+# Journal file: /home/link/fpga/projects/ebaz4205_fpga/build/vivado.jou
+#-----------------------------------------------------------
+source project.tcl
+# create_project ebaz4205_top ./
+# set_property part xc7z010clg400-1 [current_project]
+# set_property target_language vhdl [current_project]
+# set_property top ebaz4205_top [get_property srcset [current_run]]
+# source files.tcl
+## add_files -norecurse ../src/hdl/ebaz4205_top.vhd;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files ../src/hdl/ebaz4205_top.vhd]
+## add_files -norecurse ../src/hdl/system_wrapper.vhd;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files ../src/hdl/system_wrapper.vhd]
+## add_files -norecurse ../src/xilinx/xdc/bitstream.xdc;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files ../src/xilinx/xdc/bitstream.xdc]
+## add_files -norecurse ../src/xilinx/xdc/general.xdc;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files ../src/xilinx/xdc/general.xdc]
+## add_files -norecurse ../src/xilinx/xdc/pinout.xdc;
+## set_property IS_GLOBAL_INCLUDE 1 [get_files ../src/xilinx/xdc/pinout.xdc]
+## source ../src/xilinx/bd/system.tcl
+### namespace eval _tcl {
+### proc get_script_folder {} {
+###    set script_path [file normalize [info script]]
+###    set script_folder [file dirname $script_path]
+###    return $script_folder
+### }
+### }
+### variable script_folder
+### set script_folder [_tcl::get_script_folder]
+### set scripts_vivado_version 2020.2
+### set current_vivado_version [version -short]
+### if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
+###    puts ""
+###    catch {common::send_gid_msg -ssname BD::TCL -id 2041 -severity "ERROR" "This script was generated using Vivado <$scripts_vivado_version> and is being run in <$current_vivado_version> of Vivado. Please run the script in Vivado <$scripts_vivado_version> then open the design in Vivado <$current_vivado_version>. Upgrade the design by running \"Tools => Report => Report IP Status...\", then run write_bd_tcl to create an updated script."}
+### 
+###    return 1
+### }
+
+# update_compile_order -fileset sources_1
+# update_compile_order -fileset sim_1
+# exit
+INFO: [Common 17-206] Exiting Vivado at Sun Mar  5 09:22:49 2023...

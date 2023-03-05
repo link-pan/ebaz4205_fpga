@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Mar  5 09:22:50 2023
+# Process ID: 1943601
+# Current directory: /home/link/fpga/projects/ebaz4205_fpga/build
+# Command line: vivado -mode tcl -source synthesize.tcl
+# Log file: /home/link/fpga/projects/ebaz4205_fpga/build/vivado.log
+# Journal file: /home/link/fpga/projects/ebaz4205_fpga/build/vivado.jou
+#-----------------------------------------------------------
+source synthesize.tcl
